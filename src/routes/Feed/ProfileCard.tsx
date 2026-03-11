@@ -10,7 +10,7 @@ const ProfileCard: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <div className="title">
-        <Emoji>💻</Emoji> 프로필
+        <Emoji>✋</Emoji> 프로필
       </div>
       <div className="content">
         <div className="top">
