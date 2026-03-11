@@ -54,15 +54,15 @@ const CONFIG = {
     },
   },
   utterances: {
-    enable: false,
+    enable: true,
     config: {
-      repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO || "",
+      repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO || "heehortus/hortus-log-comment",
       "issue-term": "og:title",
       label: "💬 Utterances",
     },
   },
   cusdis: {
-    enable: true,
+    enable: false,
     config: {
       host: "https://cusdis.com",
       appid: "db1c6f47-e8db-4a7d-bbef-4f855138b92a", // Embed Code -> data-app-id value
