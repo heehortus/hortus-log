@@ -42,9 +42,9 @@ const CONFIG = {
     },
   },
   googleSearchConsole: {
-    enable: false,
+    enable: true,
     config: {
-      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "SUDRXQMPPwKJaO_iRJM3fORc1_JyTikOUkLpWz1Fh4A",
     },
   },
   naverSearchAdvisor: {
