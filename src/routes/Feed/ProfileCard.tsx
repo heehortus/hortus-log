@@ -59,6 +59,8 @@ const StyledWrapper = styled.div`
       padding: 0.5rem;
       flex-direction: column;
       align-items: center;
+      text-align: center;
+      white-space: pre-line;
       .name {
         font-size: 1.25rem;
         line-height: 1.75rem;
@@ -74,7 +76,7 @@ const StyledWrapper = styled.div`
       .bio {
         margin-bottom: 0.5rem;
         font-size: 0.875rem;
-        line-height: 1.25rem;
+        line-height: 1.40rem;
       }
     }
   }

@@ -4,7 +4,7 @@ const CONFIG = {
     name: "정희원",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "UX/UI | Product Designer",
-    bio: "ongoing designer",
+    bio: "디자인을 공부하고,\n글로 남깁니다.",
     email: "hee.hortus@gmail.com",
     linkedin: "",
     github: "heehortus",
@@ -54,7 +54,7 @@ const CONFIG = {
     },
   },
   utterances: {
-    enable: true,
+    enable: false,
     config: {
       repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO || "",
       "issue-term": "og:title",
@@ -62,10 +62,10 @@ const CONFIG = {
     },
   },
   cusdis: {
-    enable: false,
+    enable: true,
     config: {
       host: "https://cusdis.com",
-      appid: "", // Embed Code -> data-app-id value
+      appid: "db1c6f47-e8db-4a7d-bbef-4f855138b92a", // Embed Code -> data-app-id value
     },
   },
   isProd: process.env.VERCEL_ENV === "production", // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
