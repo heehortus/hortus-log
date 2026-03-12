@@ -4,30 +4,25 @@ import React from "react"
 
 type Props = {}
 
-const Footer: React.FC<Props> = () => {
+const PostBack: React.FC<Props> = () => {
   const router = useRouter()
   return (
     <StyledWrapper>
       <a onClick={() => router.push("/")}>← Back</a>
-      <a onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        ↑ Top
-      </a>
     </StyledWrapper>
   )
 }
 
-export default Footer
+export default PostBack
 
 const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
   font-weight: 600;
-  margin-top: 4rem;
+  margin-bottom: 2rem;
   color: ${({ theme }) => theme.colors.gray10};
   a {
-    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: block;
     cursor: pointer;
-
     :hover {
       color: ${({ theme }) => theme.colors.gray12};
     }

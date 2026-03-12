@@ -1,4 +1,5 @@
 import React from "react"
+import PostBack from "./PostBack"
 import PostHeader from "./PostHeader"
 import Footer from "./PostFooter"
 import CommentBox from "./CommentBox"
@@ -19,6 +20,7 @@ const PostDetail: React.FC<Props> = () => {
   return (
     <StyledWrapper>
       <article>
+        {data.type[0] === "Post" && <PostBack />}
         {category && (
           <div css={{ marginBottom: "0.5rem" }}>
             <Category readOnly={data.status?.[0] === "PublicOnDetail"}>
