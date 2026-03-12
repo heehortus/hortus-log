@@ -13,7 +13,6 @@ const ThemeToggle: React.FC<Props> = () => {
     const y = e.clientY
     const newScheme = scheme === "light" ? "dark" : "light"
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const doc = document as any
 
     if (!doc.startViewTransition) {
