@@ -13,21 +13,24 @@ const ThemeToggle: React.FC<Props> = () => {
     const y = e.clientY
     const newScheme = scheme === "light" ? "dark" : "light"
 
-    if (!document.startViewTransition) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const doc = document as any
+
+    if (!doc.startViewTransition) {
       setScheme(newScheme)
       return
     }
-    
-    document.documentElement.style.setProperty("---x", `${x}px`)
+
+    document.documentElement.style.setProperty("--x", `${x}px`)
     document.documentElement.style.setProperty("--y", `${y}px`)
 
-    document.startViewTransition(() => {
+    doc.startViewTransition(() => {
       setScheme(newScheme)
     })
   }
 
   return (
-    <StyledWrapper onClick={handleClick}>
+    <StyledWrapper onClick={(e) => handleClick(e)}>
       <Emoji>{scheme === "light" ? "☀️" : "🌙"}</Emoji>
     </StyledWrapper>
   )
