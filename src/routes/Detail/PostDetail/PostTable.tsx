@@ -100,7 +100,6 @@ const StyledWrapper = styled.div`
     }
     &.active {
       color: ${({ theme }) => theme.colors.gray12};
-      font-weight: 700;
     }
   }
 
