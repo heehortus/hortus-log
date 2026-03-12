@@ -7,7 +7,7 @@ import Category from "src/components/Category"
 import styled from "@emotion/styled"
 import NotionRenderer from "../components/NotionRenderer"
 import usePostQuery from "src/hooks/usePostQuery"
-import TableOfContents from "./TableOfContents"
+import PostTable from "./PostTable"
 
 type Props = {}
 
@@ -49,7 +49,7 @@ const PostDetail: React.FC<Props> = () => {
       </article>
       {data.type[0] === "Post" && hasHeadings && (
         <aside>
-          <TableOfContents recordMap={data.recordMap} />
+          <PostTable recordMap={data.recordMap} />
         </aside>
       )}
     </StyledWrapper>

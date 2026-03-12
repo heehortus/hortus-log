@@ -12,7 +12,7 @@ type Props = {
   recordMap: ExtendedRecordMap
 }
 
-const TableOfContents: React.FC<Props> = ({ recordMap }) => {
+const PostTable: React.FC<Props> = ({ recordMap }) => {
   const [activeId, setActiveId] = useState<string>("")
 
   const headings: Heading[] = Object.entries(recordMap.block)
@@ -73,7 +73,7 @@ const TableOfContents: React.FC<Props> = ({ recordMap }) => {
   )
 }
 
-export default TableOfContents
+export default PostTable
 
 const StyledWrapper = styled.div`
   position: fixed;
