@@ -24,6 +24,25 @@ export const Global = () => {
           box-sizing: border-box;
         }
 
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+          animation: none;
+          mix-blend-mode: normal;
+        }
+
+        ::view-transition-new(root) {
+          animation: clip-circle 0.5s ease-in;
+        }
+
+        @keyframes clip-circle {
+          from {
+            clip-path: circle(0% at var(--x, 50%) var(--y, 50%));
+          }
+          to {
+            clip-path: circle(150% at var(--x, 50%) var(--y, 50%));
+          }
+        }
+
         h1,
         h2,
         h3,

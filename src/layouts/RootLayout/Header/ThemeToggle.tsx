@@ -8,8 +8,22 @@ type Props = {}
 const ThemeToggle: React.FC<Props> = () => {
   const [scheme, setScheme] = useScheme()
 
-  const handleClick = () => {
-    setScheme(scheme === "light" ? "dark" : "light")
+  const handleClick = (e: React.MouseEvent) => {
+    const x = e.clientX
+    const y = e.clientY
+    const newScheme = scheme === "light" ? "dark" : "light"
+
+    if (!document.startViewTransition) {
+      setScheme(newScheme)
+      return
+    }
+    
+    document.documentElement.style.setProperty("---x", `${x}px`)
+    document.documentElement.style.setProperty("--y", `${y}px`)
+
+    document.startViewTransition(() => {
+      setScheme(newScheme)
+    })
   }
 
   return (
